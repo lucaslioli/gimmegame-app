@@ -1,11 +1,4 @@
-# GimmeGame
+# GimmeGame - App Version
+App that gives suggestions about classic games! Created to the Mobile Development discipline of the Information Systems course at Federal University of Santa Maria (UFSM).
 
-## Descrição
-
-Aplicativo para sugestão de jogos clássicos baseado em perguntas ao usuário! 
-
-App criado como trabalho final da disciplina de Sistemas de Computação Móvel, do curso de Sistemas de Informação da Universidade Federal de Santa Maria.
-
-A aplicação dispõe do Gimmo, assistente pessoal de entretenimento, cujo objetivo é ajudar você a descobrir um game ideal para jogar com a galera.
-
-Através de perguntas pré-definidas o Gimmo elenca quais os jogos mais adequados para você e seus amigos ou fámilia jogarem nos momentos de lazer e diversão.
+The prototype of this application has been developed for the IV Code Race competition. The technologies used were Laravel and Vue.js for a web version of the idea. You can check the code in [lucaslioli/gimmegame](https://github.com/lucaslioli/gimmegame).
