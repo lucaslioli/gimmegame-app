@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
         Random rand= new Random();
 
-        botaoBuscar = findViewById(R.id.btnBuscarId);
         bemVindo = findViewById(R.id.bemVindoId);
+        botaoBuscar = findViewById(R.id.btnBuscarId);
         textoResultado = findViewById(R.id.txtResultadoId);
 
         perg1 = findViewById(R.id.txtPergunta1);
