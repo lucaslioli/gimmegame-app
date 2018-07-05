@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
         Random rand= new Random();
 
-        bemVindo = findViewById(R.id.bemVindoId);
         botaoBuscar = findViewById(R.id.btnBuscarId);
+        bemVindo = findViewById(R.id.bemVindoId);
         textoResultado = findViewById(R.id.txtResultadoId);
 
         perg1 = findViewById(R.id.txtPergunta1);
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         perg4 = findViewById(R.id.txtPergunta4);
         perg5 = findViewById(R.id.txtPergunta5);
 
-        bemVindo.setText(getResources().getStringArray(R.array.pergunta1)[rand.nextInt(3)]);
+        bemVindo.setText(getResources().getStringArray(R.array.bem_vindo)[rand.nextInt(3)]);
 
         perg1.setText(getResources().getStringArray(R.array.pergunta1)[rand.nextInt(3)]);
         perg2.setText(getResources().getStringArray(R.array.pergunta2)[rand.nextInt(3)]);
