@@ -9,11 +9,15 @@
     <string name="title_activity_splash_screen">SplashScreen</string>
 
     <string name="bem_vindo_default">Bem Vindo!</string>
-    <string name="perg_default_1">Pergunta 1</string>
-    <string name="perg_default_2">Pergunta 2</string>
-    <string name="perg_default_3">Pergunta 3</string>
-    <string name="perg_default_4">Pergunta 4</string>
-    <string name="perg_default_5">Pergunta 5</string>
+    <string name="perg_default_1">Pergunta 1 - Número de Jogadores</string>
+    <string name="perg_default_2">Pergunta 2 - Faixa Etária</string>
+    <string name="perg_default_3">Pergunta 3 - Categorias</string>
+    <string name="perg_default_4">Pergunta 4 - Materiais</string>
+    <string name="perg_default_5">Pergunta 5 - Detalhes</string>
+
+    <string name="min">Min:</string>
+    <string name="max">Max:</string>
+    <string name="label_detalhe">Detalhes</string>
 
     <string name="botao_busca">Recomendar</string>
 
@@ -25,30 +29,35 @@
         <item>Olá, sou o Gimmo! Estou aqui para lhe ajudar a encontrar um jogo divertido!</item>
     </string-array>
 
+    <!-- NÚMERO DE JOGADORES -->
     <string-array name="pergunta1">
         <item>Quantas pessoas irão jogar o jogo?</item>
         <item>Qual o número de pessoas participantes?</item>
         <item>Qual o número de jogadores?</item>
     </string-array>
 
+    <!-- FAIXA ETÁRIA -->
     <string-array name="pergunta2">
         <item>Qual a faixa de etária do seu grupo?</item>
         <item>Qual a faixa de idade dos participantes?</item>
         <item>Quais categorias de jogos vocês procuram?</item>
     </string-array>
 
+    <!-- CATEGORIA -->
     <string-array name="pergunta3">
         <item>Em qual categoria vocês estão interessados?</item>
         <item>Que categoria mais lhe interessa?</item>
         <item>Selecione uma das categorias que lhe interessam...</item>
     </string-array>
 
+    <!-- MATERIAIS -->
     <string-array name="pergunta4">
         <item>Qual destes materiais está disponível?</item>
         <item>Qual destes materiais você tem a disposição?</item>
         <item>Selecione o objeto que você dispõe...</item>
     </string-array>
 
+    <!-- DETALHE -->
     <string-array name="pergunta5">
         <item>Gostaria de inseir algum outro termo na pesquisa?</item>
         <item>Deseja incluir algum outro detalhe na pesquisa?</item>
@@ -56,6 +65,7 @@
     </string-array>
 
     <string-array name="respostas_numericas">
+        <item>...</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -78,6 +88,7 @@
     </string-array>
 
     <string-array name="respostas_categorias">
+        <item>Selecione uma Categoria...</item>
         <item>Alcoólico</item>
         <item>Cartas</item>
         <item>Educativo</item>
@@ -92,6 +103,7 @@
     </string-array>
 
     <string-array name="respostas_materiais">
+        <item>Selecione um Material...</item>
         <item>Baralho</item>
         <item>Bola</item>
         <item>Bolinha de Ping-Pong</item>
