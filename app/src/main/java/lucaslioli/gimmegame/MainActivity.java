@@ -25,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-//                    mTextMessage.setText(R.string.title_home);
+                    Random rand= new Random();
+                    bemVindo.setText(getResources().getStringArray(R.array.bem_vindo)[rand.nextInt(3)]);
                     return true;
                 case R.id.navigation_games:
                     bemVindo.setText(R.string.title_games);
