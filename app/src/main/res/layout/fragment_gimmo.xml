@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GimmoFragment">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="end"
+        android:orientation="vertical"
+        android:padding="25dp"
+        tools:layout_editor_absoluteY="25dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/bemVindoId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_elements"
+                android:background="@drawable/rounded_corner"
+                android:padding="@dimen/padding_answer"
+                android:text="@string/bem_vindo_default"
+                android:textAlignment="viewStart" />
+
+            <TextView
+                android:id="@+id/txtPergunta1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner"
+                android:padding="@dimen/padding_answer"
+                android:text="@string/perg_default_1"
+                android:textAlignment="viewStart" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_elements"
+            android:layout_marginTop="@dimen/margin_elements"
+            android:background="@drawable/rounded_corner_answer"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_answer">
+
+            <TextView
+                android:id="@+id/txtJogadoresMinId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_min"
+                android:text="@string/min" />
+
+            <Spinner
+                android:id="@+id/respJogadoresMinId"
+                android:layout_width="@dimen/width_numeric_spinner"
+                android:layout_height="wrap_content"
+                android:entries="@array/respostas_numericas" />
+
+            <TextView
+                android:id="@+id/txtJogadoresMaxId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_max"
+                android:text="@string/max" />
+
+            <Spinner
+                android:id="@+id/respJogadoresMaxId"
+                android:layout_width="@dimen/width_numeric_spinner"
+                android:layout_height="wrap_content"
+                android:entries="@array/respostas_numericas" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtPergunta2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner"
+                android:padding="@dimen/padding_answer"
+                android:text="@string/perg_default_2"
+                android:textAlignment="viewStart" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_elements"
+            android:layout_marginTop="@dimen/margin_elements"
+            android:background="@drawable/rounded_corner_answer"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_answer">
+
+            <TextView
+                android:id="@+id/txtFxEtariaMinId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_min"
+                android:text="@string/min" />
+
+            <Spinner
+                android:id="@+id/respFxEtariaMinId"
+                android:layout_width="@dimen/width_numeric_spinner"
+                android:layout_height="wrap_content"
+                android:entries="@array/respostas_numericas" />
+
+            <TextView
+                android:id="@+id/txtFxEtariaMaxId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_max"
+                android:text="@string/max" />
+
+            <Spinner
+                android:id="@+id/respFxEtariaMaxId"
+                android:layout_width="@dimen/width_numeric_spinner"
+                android:layout_height="wrap_content"
+                android:entries="@array/respostas_numericas" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtPergunta3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner"
+                android:padding="@dimen/padding_answer"
+                android:text="@string/perg_default_3"
+                android:textAlignment="viewStart" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_elements"
+            android:layout_marginTop="@dimen/margin_elements"
+            android:background="@drawable/rounded_corner_answer"
+            android:padding="@dimen/padding_answer">
+
+            <Spinner
+                android:id="@+id/respCategoriaId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/respostas_categorias" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtPergunta4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner"
+                android:padding="@dimen/padding_answer"
+                android:text="@string/perg_default_4"
+                android:textAlignment="viewStart" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_elements"
+            android:layout_marginTop="@dimen/margin_elements"
+            android:background="@drawable/rounded_corner_answer"
+            android:padding="@dimen/padding_answer">
+
+            <Spinner
+                android:id="@+id/respMateriaisId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/respostas_materiais" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtPergunta5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner"
+                android:padding="@dimen/padding_answer"
+                android:text="@string/perg_default_5"
+                android:textAlignment="viewStart" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/respDetalheId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_elements"
+            android:layout_marginStart="@dimen/margin_start_answer"
+            android:layout_marginTop="@dimen/margin_elements"
+            android:background="@drawable/rounded_corner_answer"
+            android:ems="10"
+            android:hint="@string/label_detalhe"
+            android:inputType="text"
+            android:label="@string/label_detalhe"
+            android:labelFor="@id/txtPergunta5"
+            android:padding="@dimen/padding_answer"
+            android:singleLine="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_perg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnBuscarId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_elements"
+                android:layout_marginTop="@dimen/margin_elements"
+                android:background="@drawable/button_shape"
+                android:text="@string/botao_busca" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
