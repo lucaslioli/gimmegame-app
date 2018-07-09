@@ -16,7 +16,6 @@
             android:theme="@style/NoTitle">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -25,7 +24,8 @@
             android:label="@string/app_name" />
         <activity
             android:name=".GameDetails"
-            android:label="@string/title_activity_game_details"></activity>
+            android:parentActivityName=".MainActivity"
+            android:label="@string/title_activity_game_details"/>
     </application>
 
 </manifest>

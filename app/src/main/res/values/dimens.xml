@@ -1,4 +1,6 @@
 <resources>
+    <dimen name="padding_fragment">25dp</dimen>
+
     <dimen name="margin_elements">5dp</dimen>
     <dimen name="margin_top_perg">10dp</dimen>
 
@@ -7,6 +9,9 @@
 
     <dimen name="margin_start_min">10dp</dimen>
     <dimen name="margin_start_max">10dp</dimen>
+
+    <dimen name="margin_start_toolbar">16dp</dimen>
+    <dimen name="margin_bottom_toolbar">10dp</dimen>
 
     <dimen name="width_numeric_spinner">100dp</dimen>
     <!-- Default screen margins, per the Android Design guidelines. -->

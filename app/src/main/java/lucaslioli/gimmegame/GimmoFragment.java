@@ -1,73 +1,40 @@
 package lucaslioli.gimmegame;
 
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Random;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link GimmoFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link GimmoFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class GimmoFragment extends Fragment {
 
     private Button botaoBuscar;
-    private TextView bemVindo;
-    private TextView perg1, perg2, perg3, perg4, perg5;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private TextView bemVindo,
+            pergNumJogadores,
+            pergFxEtaria,
+            pergCategoria,
+            pergMaterial,
+            pergDetalhe;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private Spinner respMinJogadores,
+            respMaxJogadores,
+            respMinIdade,
+            respMaxIdade,
+            respCategoria,
+            respMaterial;
 
-    private OnFragmentInteractionListener mListener;
+    private EditText respDetalhe;
 
     public GimmoFragment() {
         // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment GimmoFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static GimmoFragment newInstance(String param1, String param2) {
-        GimmoFragment fragment = new GimmoFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
@@ -81,24 +48,45 @@ public class GimmoFragment extends Fragment {
         botaoBuscar = view.findViewById(R.id.btnBuscarId);
         bemVindo = view.findViewById(R.id.bemVindoId);
 
-        perg1 = view.findViewById(R.id.txtPergunta1);
-        perg2 = view.findViewById(R.id.txtPergunta2);
-        perg3 = view.findViewById(R.id.txtPergunta3);
-        perg4 = view.findViewById(R.id.txtPergunta4);
-        perg5 = view.findViewById(R.id.txtPergunta5);
+        // Seleciona os elementos de RESPOSTAS
+        respMinJogadores = view.findViewById(R.id.respJogadoresMinId);
+        respMaxJogadores = view.findViewById(R.id.respJogadoresMaxId);
+        respMinIdade = view.findViewById(R.id.respFxEtariaMinId);
+        respMaxIdade = view.findViewById(R.id.respFxEtariaMaxId);
+        respCategoria = view.findViewById(R.id.respCategoriaId);
+        respMaterial = view.findViewById(R.id.respMaterialId);
+        respDetalhe = view.findViewById(R.id.respDetalheId);
 
+        // Seleciona o elemento de texto das PERGUNTAS
+        pergNumJogadores = view.findViewById(R.id.txtPergunta1);
+        pergFxEtaria = view.findViewById(R.id.txtPergunta2);
+        pergCategoria = view.findViewById(R.id.txtPergunta3);
+        pergMaterial = view.findViewById(R.id.txtPergunta4);
+        pergDetalhe = view.findViewById(R.id.txtPergunta5);
+
+        // Atualiza texto das perguntas (e bem vindo) aleatóriamente
         bemVindo.setText(getResources().getStringArray(R.array.bem_vindo)[rand.nextInt(3)]);
 
-        perg1.setText(getResources().getStringArray(R.array.pergunta1)[rand.nextInt(3)]);
-        perg2.setText(getResources().getStringArray(R.array.pergunta2)[rand.nextInt(3)]);
-        perg3.setText(getResources().getStringArray(R.array.pergunta3)[rand.nextInt(3)]);
-        perg4.setText(getResources().getStringArray(R.array.pergunta4)[rand.nextInt(3)]);
-        perg5.setText(getResources().getStringArray(R.array.pergunta5)[rand.nextInt(3)]);
+        pergNumJogadores.setText(getResources().getStringArray(R.array.pergunta1)[rand.nextInt(3)]);
+        pergFxEtaria.setText(getResources().getStringArray(R.array.pergunta2)[rand.nextInt(3)]);
+        pergCategoria.setText(getResources().getStringArray(R.array.pergunta3)[rand.nextInt(3)]);
+        pergMaterial.setText(getResources().getStringArray(R.array.pergunta4)[rand.nextInt(3)]);
+        pergDetalhe.setText(getResources().getStringArray(R.array.pergunta5)[rand.nextInt(3)]);
 
+        // Onclick do botão de recomendar
         botaoBuscar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity().getApplicationContext(), GameDetails.class);
+
+                intent.putExtra("minJogadores", respMinJogadores.getSelectedItem().toString());
+                intent.putExtra("maxJogadores", respMaxJogadores.getSelectedItem().toString());
+                intent.putExtra("minIdade", respMinIdade.getSelectedItem().toString());
+                intent.putExtra("maxIdade", respMaxIdade.getSelectedItem().toString());
+                intent.putExtra("categoria", respCategoria.getSelectedItem().toString());
+                intent.putExtra("material", respMaterial.getSelectedItem().toString());
+                intent.putExtra("detalhes",respDetalhe.getText().toString());
+
                 getActivity().startActivity(intent);
             }
         });
@@ -106,41 +94,4 @@ public class GimmoFragment extends Fragment {
         return view;
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            Toast.makeText(context, "Gimmo Fragment Attached", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
-    }
 }
