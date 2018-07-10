@@ -43,6 +43,8 @@ public class GimmoFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_gimmo, container, false);
 
+        getActivity().setTitle("GimmeGame - Gimmo");
+
         Random rand= new Random();
 
         botaoBuscar = view.findViewById(R.id.btnBuscarId);

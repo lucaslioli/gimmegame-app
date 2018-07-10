@@ -5,10 +5,28 @@
     android:layout_height="match_parent"
     tools:context=".FavoritesFragment">
 
-    <TextView
+    <RelativeLayout
+        android:id="@+id/layoutSemFavoritoId"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/title_favorites"
-        tools:text="FAVORITES LIST" />
+        tools:ignore="UselessParent">
 
+        <ListView
+            android:id="@+id/listViewFavorites"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:id="@+id/semFavoritosId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/text_margin"
+            android:text="@string/nenhum_favorito"
+            android:textAlignment="center"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
 </FrameLayout>

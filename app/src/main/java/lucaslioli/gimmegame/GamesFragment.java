@@ -33,6 +33,8 @@ public class GamesFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_games, container, false);
 
+        getActivity().setTitle("GimmeGame - Lista de Jogos");
+
         listGames = view.findViewById(R.id.listViewGames);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(

@@ -24,7 +24,7 @@
                 android:id="@+id/app_bar_image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/categoria_outros"
+                android:src="@drawable/categoria_tabuleiro"
                 android:scaleType="centerCrop"
                 android:contentDescription="@string/categoria_img_description" />
 
@@ -47,6 +47,7 @@
                 android:layout_height="match_parent"
                 android:gravity="bottom"
                 android:paddingBottom="@dimen/margin_bottom_toolbar"
+                android:paddingEnd="@dimen/margin_start_toolbar"
                 android:paddingStart="@dimen/margin_start_toolbar"
                 android:text="@string/app_name"
                 android:textAlignment="center"
@@ -78,6 +79,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/text_margin"
                     android:text="@string/title_activity_game_details" />
+
             </LinearLayout>
         </android.support.v4.widget.NestedScrollView>
     </android.support.v4.widget.NestedScrollView>
@@ -90,6 +92,7 @@
         android:clickable="true"
         android:focusable="true"
         android:src="@drawable/ic_star"
+        app:backgroundTint="@color/colorAccentDark"
         app:layout_anchor="@+id/appbar"
         app:layout_anchorGravity="bottom|end" />
 </android.support.design.widget.CoordinatorLayout>

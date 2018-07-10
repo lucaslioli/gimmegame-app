@@ -27,8 +27,10 @@
     <string name="label_detalhe">Detalhes</string>
 
     <string name="botao_busca">Recomendar</string>
+    <string name="not_favorite">not</string>
 
     <string name="nenhum_resultado">Desculpe, nenhum resultado foi encontrado</string>
+    <string name="nenhum_favorito">Nenhum jogo foi adicionado aos favoritos!</string>
 
     <string-array name="bem_vindo">
         <item>Olá, eu sou o Gimmo, seu assistente de entretenimento! Estou aqui para lhe ajudar a encontrar um jogo que você possa gostar.</item>
