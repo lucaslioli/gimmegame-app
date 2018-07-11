@@ -8,6 +8,8 @@
     <ListView
         android:id="@+id/listViewGames"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:paddingEnd="@dimen/text_margin"
+        android:paddingStart="@dimen/text_margin" />
 
 </FrameLayout>

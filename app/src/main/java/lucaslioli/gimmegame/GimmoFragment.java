@@ -81,6 +81,7 @@ public class GimmoFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity().getApplicationContext(), GameDetails.class);
 
+                intent.putExtra("nomeJogo", "Truco"); // Passando manualmente para testes
                 intent.putExtra("minJogadores", respMinJogadores.getSelectedItem().toString());
                 intent.putExtra("maxJogadores", respMaxJogadores.getSelectedItem().toString());
                 intent.putExtra("minIdade", respMinIdade.getSelectedItem().toString());
