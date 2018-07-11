@@ -6,7 +6,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -108,10 +107,10 @@ public class GamesFragment extends Fragment {
         String categoria = args.getString("categoria");
         String material = args.getString("material");
 
-        String minJogadores = args.getString("maxJogadores");
+        String minJogadores = args.getString("minJogadores");
         String maxJogadores = args.getString("maxJogadores");
 
-        String minIdade = args.getString("maxIdade");
+        String minIdade = args.getString("minIdade");
 
         String detalhes = args.getString("detalhes");
 
@@ -136,13 +135,13 @@ public class GamesFragment extends Fragment {
         }
 
         if(!maxJogadores.equals(getResources().getStringArray(R.array.respostas_numericas)[0])){
-            where += " AND j.max_jogadores <= " + minJogadores;
+            where += " AND j.max_jogadores <= " + maxJogadores;
 
             flag = true;
         }
 
         if(!minIdade.equals(getResources().getStringArray(R.array.respostas_numericas)[0])){
-            where += " AND j.min_idade <= " + minIdade;
+            where += " AND j.min_idade >= " + minIdade;
 
             flag = true;
         }
