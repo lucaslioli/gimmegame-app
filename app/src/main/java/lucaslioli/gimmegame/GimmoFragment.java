@@ -3,6 +3,8 @@ package lucaslioli.gimmegame;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +17,7 @@ import java.util.Random;
 
 public class GimmoFragment extends Fragment {
 
-    private Button botaoBuscar;
+    private Button botaoBuscar, botaoSortear;
 
     private TextView bemVindo,
             pergNumJogadores,
@@ -48,6 +50,8 @@ public class GimmoFragment extends Fragment {
         Random rand= new Random();
 
         botaoBuscar = view.findViewById(R.id.btnBuscarId);
+        botaoSortear = view.findViewById(R.id.btnRandomId);
+
         bemVindo = view.findViewById(R.id.bemVindoId);
 
         // Seleciona os elementos de RESPOSTAS
@@ -79,16 +83,33 @@ public class GimmoFragment extends Fragment {
         botaoBuscar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity().getApplicationContext(), GameDetails.class);
 
-                intent.putExtra("nomeJogo", "Truco"); // Passando manualmente para testes
-                intent.putExtra("minJogadores", respMinJogadores.getSelectedItem().toString());
-                intent.putExtra("maxJogadores", respMaxJogadores.getSelectedItem().toString());
-                intent.putExtra("minIdade", respMinIdade.getSelectedItem().toString());
-                intent.putExtra("maxIdade", respMaxIdade.getSelectedItem().toString());
-                intent.putExtra("categoria", respCategoria.getSelectedItem().toString());
-                intent.putExtra("material", respMaterial.getSelectedItem().toString());
-                intent.putExtra("detalhes",respDetalhe.getText().toString());
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+
+                GamesFragment frag = new GamesFragment();
+
+                Bundle bundle = new Bundle();
+
+                bundle.putString("minJogadores", respMinJogadores.getSelectedItem().toString());
+                bundle.putString("maxJogadores", respMaxJogadores.getSelectedItem().toString());
+                bundle.putString("minIdade", respMinIdade.getSelectedItem().toString());
+                bundle.putString("maxIdade", respMaxIdade.getSelectedItem().toString());
+                bundle.putString("categoria", respCategoria.getSelectedItem().toString());
+                bundle.putString("material", respMaterial.getSelectedItem().toString());
+                bundle.putString("detalhes",respDetalhe.getText().toString());
+
+                frag.setArguments(bundle);
+
+                transaction.replace(R.id.ScrollViewId, frag).commit();
+            }
+        });
+
+        // Onclick do botão de Sortear
+        botaoSortear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity().getApplicationContext(), GameDetails.class);
 
                 getActivity().startActivity(intent);
             }

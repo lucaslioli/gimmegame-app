@@ -43,6 +43,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Inicializa o listener da bottom navigation view
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        // Chama o fragment do Gimmo ao abrir o app
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.ScrollViewId, new GimmoFragment()).commit();
+
         // Base de Dados
         database = openOrCreateDatabase("gimmegame", MODE_PRIVATE, null);
 
@@ -304,14 +313,6 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        // Inicializa o listener da bottom navigation view
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
-        // Chama o fragment do Gimmo ao abrir o app
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.ScrollViewId, new GimmoFragment()).commit();
     }
 
 }

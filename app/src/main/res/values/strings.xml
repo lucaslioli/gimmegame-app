@@ -9,9 +9,6 @@
 
     <string name="gimmo">Gimmo</string>
 
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
-
     <string name="title_activity_splash_screen">SplashScreen</string>
     <string name="categoria_img_description">Imagem da Categoria</string>
 
@@ -19,14 +16,15 @@
     <string name="perg_default_1">Número de Jogadores: </string>
     <string name="perg_default_2">Faixa Etária: </string>
     <string name="perg_default_3">Categoria(s): </string>
-    <string name="perg_default_4">Materiai(s): </string>
+    <string name="perg_default_4">Material(is): </string>
     <string name="perg_default_5">Descrição: </string>
 
     <string name="min">Min:</string>
     <string name="max">Max:</string>
-    <string name="label_detalhe">Detalhes</string>
+    <string name="label_detalhe">Ex.: Duplas, Pontuação</string>
 
     <string name="botao_busca">Recomendar</string>
+    <string name="botao_sortear">Sortear</string>
     <string name="not_favorite">not</string>
 
     <string name="nenhum_resultado">Desculpe, nenhum resultado foi encontrado</string>
@@ -93,7 +91,6 @@
         <item>16</item>
         <item>17</item>
         <item>18</item>
-        <item>+18</item>
     </string-array>
 
     <string-array name="respostas_categorias">

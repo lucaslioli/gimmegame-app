@@ -233,16 +233,27 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_top_perg"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnBuscarId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_elements"
+                android:layout_marginEnd="@dimen/margin_elements"
                 android:layout_marginTop="@dimen/margin_elements"
                 android:background="@drawable/button_shape"
                 android:text="@string/botao_busca" />
+
+            <Button
+                android:id="@+id/btnRandomId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_elements"
+                android:layout_marginStart="@dimen/margin_elements"
+                android:layout_marginTop="@dimen/margin_elements"
+                android:background="@drawable/buttton2_shape"
+                android:text="@string/botao_sortear" />
 
         </LinearLayout>
 
